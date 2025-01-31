@@ -1,6 +1,9 @@
 /dev_data/
 /venv/
 /__pycache__/
-/baseline.log
-/model/
-/result/
+# /baseline.log
+# /model/
+# /result/
+
+dev_data_ToyCar.zip
+eval_data_train_ToyCar.zip

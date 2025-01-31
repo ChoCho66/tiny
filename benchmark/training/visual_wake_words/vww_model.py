@@ -38,8 +38,8 @@ def mobilenet_v1():
     x = DepthwiseConv2D(kernel_size=3,
                   strides=1,
                   padding='same',
-                  kernel_initializer='he_normal',
-                  kernel_regularizer=l2(1e-4))(x)
+                  depthwise_initializer='he_normal',
+                  depthwise_regularizer=l2(1e-4))(x)
     x = BatchNormalization()(x)
     x = Activation('relu')(x)
 
@@ -57,8 +57,8 @@ def mobilenet_v1():
     x = DepthwiseConv2D(kernel_size=3,
                   strides=2,
                   padding='same',
-                  kernel_initializer='he_normal',
-                  kernel_regularizer=l2(1e-4))(x)
+                  depthwise_initializer='he_normal',
+                  depthwise_regularizer=l2(1e-4))(x)
     x = BatchNormalization()(x)
     x = Activation('relu')(x)
 
@@ -76,8 +76,8 @@ def mobilenet_v1():
     x = DepthwiseConv2D(kernel_size=3,
                   strides=1,
                   padding='same',
-                  kernel_initializer='he_normal',
-                  kernel_regularizer=l2(1e-4))(x)
+                  depthwise_initializer='he_normal',
+                  depthwise_regularizer=l2(1e-4))(x)
     x = BatchNormalization()(x)
     x = Activation('relu')(x)
 
@@ -94,8 +94,8 @@ def mobilenet_v1():
     x = DepthwiseConv2D(kernel_size=3,
                   strides=2,
                   padding='same',
-                  kernel_initializer='he_normal',
-                  kernel_regularizer=l2(1e-4))(x)
+                  depthwise_initializer='he_normal',
+                  depthwise_regularizer=l2(1e-4))(x)
     x = BatchNormalization()(x)
     x = Activation('relu')(x)
 
@@ -113,8 +113,8 @@ def mobilenet_v1():
     x = DepthwiseConv2D(kernel_size=3,
                   strides=1,
                   padding='same',
-                  kernel_initializer='he_normal',
-                  kernel_regularizer=l2(1e-4))(x)
+                  depthwise_initializer='he_normal',
+                  depthwise_regularizer=l2(1e-4))(x)
     x = BatchNormalization()(x)
     x = Activation('relu')(x)
 
@@ -131,8 +131,8 @@ def mobilenet_v1():
     x = DepthwiseConv2D(kernel_size=3,
                   strides=2,
                   padding='same',
-                  kernel_initializer='he_normal',
-                  kernel_regularizer=l2(1e-4))(x)
+                  depthwise_initializer='he_normal',
+                  depthwise_regularizer=l2(1e-4))(x)
     x = BatchNormalization()(x)
     x = Activation('relu')(x)
 
@@ -151,8 +151,8 @@ def mobilenet_v1():
     x = DepthwiseConv2D(kernel_size=3,
                   strides=1,
                   padding='same',
-                  kernel_initializer='he_normal',
-                  kernel_regularizer=l2(1e-4))(x)
+                  depthwise_initializer='he_normal',
+                  depthwise_regularizer=l2(1e-4))(x)
     x = BatchNormalization()(x)
     x = Activation('relu')(x)
 
@@ -169,8 +169,8 @@ def mobilenet_v1():
     x = DepthwiseConv2D(kernel_size=3,
                   strides=1,
                   padding='same',
-                  kernel_initializer='he_normal',
-                  kernel_regularizer=l2(1e-4))(x)
+                  depthwise_initializer='he_normal',
+                  depthwise_regularizer=l2(1e-4))(x)
     x = BatchNormalization()(x)
     x = Activation('relu')(x)
 
@@ -187,8 +187,8 @@ def mobilenet_v1():
     x = DepthwiseConv2D(kernel_size=3,
                   strides=1,
                   padding='same',
-                  kernel_initializer='he_normal',
-                  kernel_regularizer=l2(1e-4))(x)
+                  depthwise_initializer='he_normal',
+                  depthwise_regularizer=l2(1e-4))(x)
     x = BatchNormalization()(x)
     x = Activation('relu')(x)
 
@@ -205,8 +205,8 @@ def mobilenet_v1():
     x = DepthwiseConv2D(kernel_size=3,
                   strides=1,
                   padding='same',
-                  kernel_initializer='he_normal',
-                  kernel_regularizer=l2(1e-4))(x)
+                  depthwise_initializer='he_normal',
+                  depthwise_regularizer=l2(1e-4))(x)
     x = BatchNormalization()(x)
     x = Activation('relu')(x)
 
@@ -223,8 +223,8 @@ def mobilenet_v1():
     x = DepthwiseConv2D(kernel_size=3,
                   strides=1,
                   padding='same',
-                  kernel_initializer='he_normal',
-                  kernel_regularizer=l2(1e-4))(x)
+                  depthwise_initializer='he_normal',
+                  depthwise_regularizer=l2(1e-4))(x)
     x = BatchNormalization()(x)
     x = Activation('relu')(x)
 
@@ -241,8 +241,8 @@ def mobilenet_v1():
     x = DepthwiseConv2D(kernel_size=3,
                   strides=2,
                   padding='same',
-                  kernel_initializer='he_normal',
-                  kernel_regularizer=l2(1e-4))(x)
+                  depthwise_initializer='he_normal',
+                  depthwise_regularizer=l2(1e-4))(x)
     x = BatchNormalization()(x)
     x = Activation('relu')(x)
 
@@ -260,8 +260,8 @@ def mobilenet_v1():
     x = DepthwiseConv2D(kernel_size=3,
                   strides=1,
                   padding='same',
-                  kernel_initializer='he_normal',
-                  kernel_regularizer=l2(1e-4))(x)
+                  depthwise_initializer='he_normal',
+                  depthwise_regularizer=l2(1e-4))(x)
     x = BatchNormalization()(x)
     x = Activation('relu')(x)
 

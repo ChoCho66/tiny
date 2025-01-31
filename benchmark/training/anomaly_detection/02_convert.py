@@ -71,7 +71,7 @@ if __name__ == "__main__":
         # based on https://github.com/tensorflow/model-optimization/blob/master/tensorflow_model_optimization/python/core/quantization/keras/layers/conv_batchnorm.py
         h = model.input
         skip = False
-        for i in range(len(model.layers)):
+        for i in range(1,len(model.layers)):
             if skip:
                 skip = False
                 continue
@@ -106,6 +106,7 @@ if __name__ == "__main__":
             f.write(tflite_model)
 
         # Quantization of weights (but not the activations)
+        converter = tf.lite.TFLiteConverter.from_keras_model(model)
         converter.optimizations = [tf.lite.Optimize.DEFAULT]
         tflite_model = converter.convert()
         tflite_file = "{model}/model_{machine_type}_quant.tflite".format(model=param["model_directory"],
@@ -129,6 +130,7 @@ if __name__ == "__main__":
                 yield [sample]
 
         # Full integer quantization of weights and activations
+        converter = tf.lite.TFLiteConverter.from_keras_model(model)
         converter.optimizations = [tf.lite.Optimize.DEFAULT]
         converter.representative_dataset = representative_dataset_gen
         tflite_model = converter.convert()
@@ -139,6 +141,7 @@ if __name__ == "__main__":
 
 
         # Full integer quantization of weights and activations for micro
+        converter = tf.lite.TFLiteConverter.from_keras_model(model)
         converter.optimizations = [tf.lite.Optimize.DEFAULT]
         converter.representative_dataset = representative_dataset_gen
         converter.target_spec.supported_ops = [tf.lite.OpsSet.TFLITE_BUILTINS_INT8]
@@ -151,6 +154,7 @@ if __name__ == "__main__":
             f.write(tflite_model)
 
         # Full integer quantization of weights and activations for micro, int8 input and output
+        converter = tf.lite.TFLiteConverter.from_keras_model(model)
         converter.optimizations = [tf.lite.Optimize.DEFAULT]
         converter.representative_dataset = representative_dataset_gen
         converter.target_spec.supported_ops = [tf.lite.OpsSet.TFLITE_BUILTINS_INT8]

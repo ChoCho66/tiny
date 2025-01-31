@@ -99,7 +99,7 @@ def get_model(args):
 
     # First layer of separable depthwise conv2d
     # Separable consists of depthwise conv2d followed by conv2d with 1x1 kernels
-    x = DepthwiseConv2D(depth_multiplier=1, kernel_size=(3,3), padding='same', kernel_regularizer=regularizer)(x)
+    x = DepthwiseConv2D(depth_multiplier=1, kernel_size=(3,3), padding='same', depthwise_regularizer=regularizer)(x)
     x = BatchNormalization()(x)
     x = Activation('relu')(x)
     x = Conv2D(filters, (1,1), padding='same', kernel_regularizer=regularizer)(x)
@@ -107,7 +107,7 @@ def get_model(args):
     x = Activation('relu')(x)
 
     # Second layer of separable depthwise conv2d
-    x = DepthwiseConv2D(depth_multiplier=1, kernel_size=(3,3), padding='same', kernel_regularizer=regularizer)(x)
+    x = DepthwiseConv2D(depth_multiplier=1, kernel_size=(3,3), padding='same', depthwise_regularizer=regularizer)(x)
     x = BatchNormalization()(x)
     x = Activation('relu')(x)
     x = Conv2D(filters, (1,1), padding='same', kernel_regularizer=regularizer)(x)
@@ -115,7 +115,7 @@ def get_model(args):
     x = Activation('relu')(x)
 
     # Third layer of separable depthwise conv2d
-    x = DepthwiseConv2D(depth_multiplier=1, kernel_size=(3,3), padding='same', kernel_regularizer=regularizer)(x)
+    x = DepthwiseConv2D(depth_multiplier=1, kernel_size=(3,3), padding='same', depthwise_regularizer=regularizer)(x)
     x = BatchNormalization()(x)
     x = Activation('relu')(x)
     x = Conv2D(filters, (1,1), padding='same', kernel_regularizer=regularizer)(x)
@@ -123,7 +123,7 @@ def get_model(args):
     x = Activation('relu')(x)
 
     # Fourth layer of separable depthwise conv2d
-    x = DepthwiseConv2D(depth_multiplier=1, kernel_size=(3,3), padding='same', kernel_regularizer=regularizer)(x)
+    x = DepthwiseConv2D(depth_multiplier=1, kernel_size=(3,3), padding='same', depthwise_regularizer=regularizer)(x)
     x = BatchNormalization()(x)
     x = Activation('relu')(x)
     x = Conv2D(filters, (1,1), padding='same', kernel_regularizer=regularizer)(x)
@@ -168,7 +168,7 @@ def get_model(args):
     # Separable consists of depthwise conv2d followed by conv2d with 1x1 kernels
     # First layer of separable depthwise conv2d
     # Separable consists of depthwise conv2d followed by conv2d with 1x1 kernels
-    x = DepthwiseConv2D(depth_multiplier=1, kernel_size=(3,3), padding='same', kernel_regularizer=regularizer)(x)
+    x = DepthwiseConv2D(depth_multiplier=1, kernel_size=(3,3), padding='same', depthwise_regularizer=regularizer)(x)
     x = BatchNormalization()(x)
     x = Activation('relu')(x)
     x = Conv2D(filters, (1,1), padding='same', kernel_regularizer=regularizer)(x)
@@ -176,7 +176,7 @@ def get_model(args):
     x = Activation('relu')(x)
 
     # Second layer of separable depthwise conv2d
-    x = DepthwiseConv2D(depth_multiplier=1, kernel_size=(3,3), padding='same', kernel_regularizer=regularizer)(x)
+    x = DepthwiseConv2D(depth_multiplier=1, kernel_size=(3,3), padding='same', depthwise_regularizer=regularizer)(x)
     x = BatchNormalization()(x)
     x = Activation('relu')(x)
     x = Conv2D(filters, (1,1), padding='same', kernel_regularizer=regularizer)(x)
@@ -184,7 +184,7 @@ def get_model(args):
     x = Activation('relu')(x)
 
     # Third layer of separable depthwise conv2d
-    x = DepthwiseConv2D(depth_multiplier=1, kernel_size=(3,3), padding='same', kernel_regularizer=regularizer)(x)
+    x = DepthwiseConv2D(depth_multiplier=1, kernel_size=(3,3), padding='same', depthwise_regularizer=regularizer)(x)
     x = BatchNormalization()(x)
     x = Activation('relu')(x)
     x = Conv2D(filters, (1,1), padding='same', kernel_regularizer=regularizer)(x)
@@ -192,7 +192,7 @@ def get_model(args):
     x = Activation('relu')(x)
 
     # Fourth layer of separable depthwise conv2d
-    x = DepthwiseConv2D(depth_multiplier=1, kernel_size=(3,3), padding='same', kernel_regularizer=regularizer)(x)
+    x = DepthwiseConv2D(depth_multiplier=1, kernel_size=(3,3), padding='same', depthwise_regularizer=regularizer)(x)
     x = BatchNormalization()(x)
     x = Activation('relu')(x)
     x = Conv2D(filters, (1,1), padding='same', kernel_regularizer=regularizer)(x)
